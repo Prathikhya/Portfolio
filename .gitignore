@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 
 # by me
-src/ap
+ap
+findit.txt

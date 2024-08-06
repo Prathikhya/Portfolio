@@ -1,10 +1,10 @@
-// import React from 'react'
+import React from 'react'
 import { createBrowserRouter } from "react-router-dom";
+
+
 function Index() {
   return (
-    <div>
-      <h1>welcome</h1>
-    </div>
+    <h1>hello</h1>
   )
 }
 

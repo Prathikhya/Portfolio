@@ -1,0 +1,17 @@
+:root{
+    --primary: #0079FF;
+    --secondary: #00DFA2;
+    --terity: #F6FA70;
+    --quaditary: #FF0060;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--primary);
+    color: #fff; /* Ensure text is visible against the background */
+  }

@@ -1,7 +1,9 @@
-import './App.css';
+import  './App.css';
 import ProductTab from './ap/ProductTab';
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 import Index from './pages/home/Index';
+
+
 function App() {
 
   const router = createBrowserRouter([
@@ -12,9 +14,7 @@ function App() {
   ]);
 
   return (
-    <>
-      {/* <ProductTab/>  */}
-      
+    <>      {/* <ProductTab/>  */}
       <RouterProvider router={router} />
     </>
    
