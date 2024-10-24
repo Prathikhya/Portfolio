@@ -1,7 +1,7 @@
 import  './App.css';
-import ProductTab from './ap/ProductTab';
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
-import Index from './pages/home/Index';
+import Index from './pages/home';
+
 
 
 function App() {
@@ -10,11 +10,17 @@ function App() {
     {
       path: "/",
       element: <Index/>,
+      errorElement: <Error/>
     },
+    // {
+    //   path: "/admin",
+    //   element: <Admin/>,
+    //   errorElement: <Error/>
+    // },
   ]);
 
   return (
-    <>      {/* <ProductTab/>  */}
+    <>      
       <RouterProvider router={router} />
     </>
    

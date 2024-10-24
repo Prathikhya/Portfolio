@@ -1,17 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root{
-    --primary: #0079FF;
-    --secondary: #00DFA2;
-    --terity: #F6FA70;
-    --quaditary: #FF0060;
+    --primary: #FFE9D0;
+    --secondary: #FFFED3;
+    --terity: #BBE9FF;
+    --quaditary: #B1AFFF;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
   }
   
   body {
-    background-color: var(--primary);
-    color: #fff; /* Ensure text is visible against the background */
+    /* background-color:#3a405a;
+    color: #fff;
+     */
+    /* color: #fff; */
   }
+
+  
+
+  h4{
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+  }
+  img{
+    width: 350px;
+    height: 350px;
+  }
+
+.wink{
+  font-size: 2.3rem;
+  /* color: #F6FA70; */
+}
+
+/* it is intro Part */
+.intro{
+  height: 80vh;
+  /* background-color: rgb(66, 37, 9); */
+  
+}
+.intro h6{
+  font-size: 1.5rem;
+}
+.intro h1{
+  font-size: 3rem;
+  letter-spacing: .5rem;
+}
+
+.intro p{
+  font-size: 1rem;
+}
+.intro button{
+  width: 15%;
+}
+
+/* Help.jsx section */
+
+
+/* INtro.jsx section */
+.name{
+  font-size:5rem;
+  font-weight:700;
+  letter-spacing:.3rem;
+  color:#B1AFFF;
+}
+.title{
+  font-weight: 700;
+}
+
+
+.bts{
+ 
+}
+
+@keyframes bts{
+
+  0%{
+    background-color: #B1AFFF;
+  }
+  100%{
+    background-color: #FFE9D0;
+  }
+
+}
