@@ -2,6 +2,7 @@ export const SkillsName = [
 {
     _id:1,
     skillName: "C",
+    
 },
 {
     _id:2,

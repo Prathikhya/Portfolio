@@ -2,6 +2,7 @@ import React from 'react'
 import SectionTitle from '../../Components/SectionTitle';
 import { Box, Button, Container, Typography } from '@mui/material';
 import { motion } from "framer-motion"
+import Buttonmy from '../../Components/Buttonmy';
 
 function About() {
 
@@ -47,7 +48,7 @@ function About() {
           <Typography variant='h5'
             sx={{
               fontWeight: 'bold',
-              color: 'primary.fourth',
+              color: 'primary.third',
               py: 1
             }}>
             A little about myself....
@@ -64,23 +65,7 @@ function About() {
             the latest industry trends."
           </Typography>
 
-          <Button variant="contained" sx={{
-              m: 1,
-              p: '.8rem',
-              fontWeight: 600,
-              letterSpacing:2.5,
-             backgroundColor:"transparent",
-             color:"primary.secondary",
-             borderRadius:3,
-             '&:hover':{
-              backgroundColor:'primary.third',
-              color:'#fff',
-             
-             }
-
-            }}>
-             Download CV
-            </Button>
+          <Buttonmy content="Download CV" />
         </Box>
 
 

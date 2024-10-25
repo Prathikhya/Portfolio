@@ -8,6 +8,7 @@ import {
     Button,
     Typography
 } from '@mui/material';
+import Buttonmy from '../Components/Buttonmy';
 
 // Initial values for the form
 const initialValues = {
@@ -87,14 +88,7 @@ const ContactSend = () => {
                          />
                      </Box>
                      <Box sx={{display: 'flex', justifyContent: 'center', width: '100%'}}>
-                         <Button type="submit" variant="contained" sx={{
-                             bgcolor: 'primary.fourth',
-                             color: 'white',
-                             border: 'primary.fourth',
-                             width: '25%',
-                             
-                             
-                         }}>Send</Button>
+                     <Buttonmy content="Send"/>
                      </Box>
                  </Box>
              </form>      

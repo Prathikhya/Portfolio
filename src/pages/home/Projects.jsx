@@ -11,6 +11,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 
 
 function Projects() {
+
   const settings = {
     dots: true,
     infinite: true,
@@ -40,18 +41,21 @@ function Projects() {
     ],
   };
 
+
   return (
     <>
       <SectionTitle title="Projects" />
+
+
       <Box sx={{ m: 3 }}>
         <Slider {...settings}>
           {pop.map((crops) => (
 
-
             <Card
               key={crops.id} // Use a unique identifier
               sx={{
-                bgcolor: 'primary.fourth',
+               
+                color:'primary.fourth',
                 maxWidth: 350,
                 height: 400,
                 boxShadow: '14px 21px 32px -18px rgba(0,0,0,0.38)',
@@ -64,6 +68,7 @@ function Projects() {
               }}
             >
               <CardActionArea>
+
                 <CardMedia
                   component="img"
                   sx={{ height: "150px" }}
@@ -75,7 +80,7 @@ function Projects() {
                     {crops.title} ({crops.period})
                   </Typography>
                   <Typography variant="body2" sx={{
-                    color: 'text.secondary',
+                    color: 'primary.main',
                     display: '-webkit-box',
                     overflow: 'hidden',
                     WebkitBoxOrient: 'vertical',
@@ -90,17 +95,28 @@ function Projects() {
                   ))}
                 </CardContent>
               </CardActionArea>
+
+              
               <CardActions>
                 <Button variant="contained"  href={crops.link} 
-                  target="_blank" sx={{ borderRadius: "1rem", m: 1 }}>
+                  target="_blank" sx={{ backgroundColor:'primary.secondary',borderRadius: "1rem", m: 1 }}>
                   View Project
                 </Button>
+
                 <IconButton
                 component="a"
                 href={crops.git}
                 target="_blank"
+                sx={{
+                  color: 'primary.fourth', // Change this to the color you want
+                  '&:hover': {
+                    color: 'primary.secondary', 
+                  
+                  }
+                }}
                 >
-                <GitHubIcon/>
+                <GitHubIcon  />
+
                 </IconButton>
                 
               </CardActions>

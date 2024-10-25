@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '@mui/material/Button';
 import { Box, Typography, Container } from '@mui/material';
 import { motion } from 'framer-motion';
+import Buttonmy from '../../Components/Buttonmy';
 
 
 function Intro() {
@@ -112,22 +113,7 @@ function Intro() {
             animate={{ opacity: 1 }}
             transition={{ duration: .2, ease: 'linear' }}
           >
-            <Button variant="contained" sx={{
-              m: 1,
-              p: '.8rem',
-              fontWeight: 600,
-             backgroundColor:"transparent",
-             color:"primary.secondary",
-             borderRadius:3,
-             '&:hover':{
-              backgroundColor:'primary.third',
-              color:'#fff',
-             
-             }
-
-            }}>
-              Get started
-            </Button>
+           <Buttonmy content="Get Started" />
           </motion.div>
         </Container>
       </motion.div>
