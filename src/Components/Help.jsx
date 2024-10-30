@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Toolbar, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 
 
@@ -22,14 +22,15 @@ export default function Help() {
               sm:3,
               md: 4,
               lg: 5
-            }
+            },
+            backdropFilter:'blur(10px)'
+
           }}
           >
-            <Toolbar>
+          
             <Typography variant="h3">B</Typography>
             <Typography variant="h3" >T</Typography>
             <Typography variant="h3">S</Typography>
-            </Toolbar>
             
 
 

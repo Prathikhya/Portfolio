@@ -9,16 +9,19 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Skills from './Skills';
 import Footer from './Footer';
-import * as motion from "framer-motion/client"
+import * as motion from "framer-motion/client";
 import Exaple from './Exaple';
-import Navbar from '../Navbar';
+import Navbar from './Navbar';
+import '../../index.css';
+
 
 function index() {
     return (
       <>
       <ThemeProvider theme={theme}>
+        
       <Help/>
-      <Navbar/>
+      {/* <Navbar/> */}
       {/* <motion.div
     initial={{opacity: 0,y:20}}
     animate={{ opacity:1, y:0}}
@@ -32,7 +35,6 @@ function index() {
         <Skills/>
         <Contact/>
       </Container>
-      {/* </motion.div> */}
       <Footer/>
       </ThemeProvider>
       

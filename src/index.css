@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root{
-    --primary: #FFE9D0;
-    --secondary: #FFFED3;
-    --terity: #BBE9FF;
-    --quaditary: #B1AFFF;
+  /* --main: #3b3b3f;
+  --secondary: #4163b4;
+  --third: #ff8552;
+  --fourth: #020329; */
 }
 
 *{
@@ -86,3 +86,8 @@
   }
 
 }
+
+
+
+
+
