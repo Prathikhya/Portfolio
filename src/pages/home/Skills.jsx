@@ -24,6 +24,8 @@ function Skills() {
           flexWrap: 'wrap',
           justifyContent:'center',
           alignItems: 'center',
+         
+         
 
         }}>
           
@@ -32,7 +34,7 @@ function Skills() {
             (
 
             <Card className={'skillcard'} key={skill._id} sx={{
-              borderRadius: 5,
+              borderRadius: 5, m: {xs:1},
             }} >
       <CardActionArea>
         <CardMedia

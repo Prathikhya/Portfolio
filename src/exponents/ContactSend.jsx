@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import {
     Box,
-    Card,
-    CardContent,
-    CardHeader,
     TextField,
     Button,
     Typography
@@ -50,10 +47,13 @@ const ContactSend = () => {
 
     return (
         <>
+        <Box>
+
+       
         <form onSubmit={handleSubmit}>
                  <Box sx={{ padding: 3 }}>
                      {error && <Typography color="error">{error}</Typography>}
-                     <Typography variant='h4'>Flee free to contact</Typography>
+                     <Typography variant='h4' color='primary.third' >Feel free to contact</Typography>
                      <Box sx={{ mb: 2 }}>
                          <TextField
                              name="name"
@@ -92,51 +92,9 @@ const ContactSend = () => {
                      </Box>
                  </Box>
              </form>      
+             </Box>
         </>
-        // <Card sx={{ maxWidth: 500, mt: 4 }}>
-        //     <CardHeader title="Feel Free to Contact Us" />
-        //     <form onSubmit={handleSubmit}>
-        //         <CardContent sx={{ padding: 2 }}>
-        //             {error && <Typography color="error">{error}</Typography>}
-        //             <Box sx={{ mb: 2 }}>
-        //                 <TextField
-        //                     name="name"
-        //                     label="Name"
-        //                     variant="standard"
-        //                     fullWidth
-        //                     value={formValues.name}
-        //                     onChange={handleChange}
-        //                     required
-        //                 />
-        //             </Box>
-        //             <Box sx={{ mb: 2 }}>
-        //                 <TextField
-        //                     name="email"
-        //                     label="Email"
-        //                     variant="standard"
-        //                     fullWidth
-        //                     value={formValues.email}
-        //                     onChange={handleChange}
-        //                     required
-        //                 />
-        //             </Box>
-        //             <Box sx={{ mb: 2 }}>
-        //                 <TextField
-        //                     name="message"
-        //                     label="Message"
-        //                     variant="standard"
-        //                     fullWidth
-        //                     value={formValues.message}
-        //                     onChange={handleChange}
-        //                     required
-        //                 />
-        //             </Box>
-        //             <Box>
-        //                 <Button type="submit" variant="contained">Send</Button>
-        //             </Box>
-        //         </CardContent>
-        //     </form>
-        // </Card>
+        
     );
 };
 
