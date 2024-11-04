@@ -24,8 +24,7 @@ function Skills() {
           flexWrap: 'wrap',
           justifyContent:'center',
           alignItems: 'center',
-         
-         
+          my: 4    
 
         }}>
           
@@ -34,7 +33,7 @@ function Skills() {
             (
 
             <Card className={'skillcard'} key={skill._id} sx={{
-              borderRadius: 5, m: {xs:1},
+              borderRadius: 5, m: {xs:1, md: 3}, backgroundColor:'primary.fourth', color:'primary.third',
             }} >
       <CardActionArea>
         <CardMedia
@@ -44,10 +43,11 @@ function Skills() {
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="body1" component="div" sx={{
+          <Typography gutterBottom variant="h6" component="div" sx={{
             display:'flex',
             justifyContent:'center',
             alignItems:'center',
+            fontWeight:700
           }} >
             {skill.skillName}
           </Typography>

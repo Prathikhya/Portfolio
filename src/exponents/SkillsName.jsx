@@ -40,7 +40,7 @@ export const SkillsName = [
 },
 {
     _id:9,
-    skillName: "Git hub",
+    skillName: "Git",
 },
 {
     _id:10,

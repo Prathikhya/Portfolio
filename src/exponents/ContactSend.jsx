@@ -21,6 +21,7 @@ const ContactSend = () => {
     // Handle input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
+        
         setFormValues({
             ...formValues,
             [name]: value,
@@ -49,16 +50,18 @@ const ContactSend = () => {
         <>
         <Box>
 
-       
         <form onSubmit={handleSubmit}>
+
                  <Box sx={{ padding: 3 }}>
                      {error && <Typography color="error">{error}</Typography>}
-                     <Typography variant='h4' color='primary.third' >Feel free to contact</Typography>
+
+                     <Typography variant='h5' color='primary.third' mb={2} >Feel free to contact</Typography>
+
                      <Box sx={{ mb: 2 }}>
                          <TextField
                              name="name"
                              label="Name"
-                             variant="standard"
+                             variant="outlined"
                              fullWidth
                              value={formValues.name}
                              onChange={handleChange}
@@ -69,7 +72,7 @@ const ContactSend = () => {
                          <TextField
                              name="email"
                              label="Email"
-                             variant="standard"
+                             variant="outlined"
                              fullWidth
                              value={formValues.email}
                              onChange={handleChange}
@@ -80,7 +83,7 @@ const ContactSend = () => {
                          <TextField
                              name="message"
                              label="Message"
-                             variant="standard"
+                             variant="outlined"
                              fullWidth
                              value={formValues.message}
                              onChange={handleChange}
