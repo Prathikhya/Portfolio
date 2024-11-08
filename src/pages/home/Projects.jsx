@@ -17,8 +17,7 @@ function Projects() {
     infinite: true,
     speed: 200,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     arrows: true,
     nextArrow: < KeyboardArrowRightIcon color="success"/>,
@@ -35,7 +34,6 @@ function Projects() {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-         
         },
       },
     ],
@@ -47,17 +45,16 @@ function Projects() {
       <SectionTitle title="Projects" />
 
 
-      <Box sx={{ m: 3 }}>
-        <Slider {...settings}>
+      <Box sx={{ m: 2 }}>
+        <Slider {...settings} className='slider'>
           {pop.map((crops) => (
 
             <Card
               key={crops.id} // Use a unique identifier
               sx={{
-               
                 color:'primary.fourth',
-                maxWidth: 350,
-                height: 400,
+                maxWidth: {xs: 250, md:300},
+                height: {xs: 450, md: 450},
                 boxShadow: '14px 21px 32px -18px rgba(0,0,0,0.38)',
                 borderTopRightRadius: '30px',
                 borderBottomLeftRadius: '30px',

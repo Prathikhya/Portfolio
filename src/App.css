@@ -21,3 +21,11 @@
    
 }
 
+/* slider */
+.slider{
+    margin: 20px;
+}
+
+.slick-list{
+    margin: 50px !important;
+}
