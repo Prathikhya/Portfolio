@@ -8,6 +8,7 @@ import { pop } from '../../exponents/pop';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 
 function Projects() {
@@ -20,14 +21,14 @@ function Projects() {
     autoplay: false,
     autoplaySpeed: 3000,
     arrows: true,
-    nextArrow: < KeyboardArrowRightIcon color="success"/>,
-    prevArrow: <KeyboardArrowLeftIcon color="success"/>,
+    nextArrow: < KeyboardArrowRightIcon color="success" />,
+    prevArrow: <KeyboardArrowLeftIcon color="success" />,
     responsive: [
       {
         breakpoint: 960,
         settings: {
           slidesToShow: 2,
-          
+
         },
       },
       {
@@ -46,20 +47,32 @@ function Projects() {
 
 
       <Box sx={{ m: 2 }}>
+
+
+        <IconButton aria-label="ArrowLeft">
+          <KeyboardArrowLeftIcon />
+        </IconButton>
+
+        <IconButton aria-label="ArrowRight">
+          <KeyboardArrowRightIcon />
+        </IconButton>
+
+
         <Slider {...settings} className='slider'>
+
           {pop.map((crops) => (
 
             <Card
               key={crops.id} // Use a unique identifier
               sx={{
-                color:'primary.fourth',
-                maxWidth: {xs: 250, md:300},
-                height: {xs: 450, md: 450},
+                color: 'primary.fourth',
+                maxWidth: { xs: 250, md: 300 },
+               
                 boxShadow: '14px 21px 32px -18px rgba(0,0,0,0.38)',
                 borderTopRightRadius: '30px',
                 borderBottomLeftRadius: '30px',
                 '&:hover': {
-                  boxShadow: '-32px 3px 62px -20px rgba(0,0,0,0.62)',
+                  // boxShadow: '-32px 3px 62px -20px rgba(0,0,0,0.62)',
                 },
                 margin: '0 10px',
               }}
@@ -67,59 +80,78 @@ function Projects() {
               <CardActionArea>
 
                 <CardMedia
-                  component="img"
-                  sx={{ height: "150px" }}
+                  component="div"
+                  sx={{
+                    height: "150px",
+
+                  }}
                   image={crops.image}
                   alt={crops.title}
+
                 />
+
+                <Box sx={{
+                  width:"100%",
+                  height:50,
+                  position: "absolute",
+                  top: "100px",
+                  left: 0,
+                  px:1,
+                  color: 'white',
+                  backdropFilter: ' blur(15px)',
+                  textAlign: "center"
+                 
+
+                }}>
+                  <Typography component="p" variant="subtitle2">{crops.title}</Typography>
+
+                </Box>
+
                 <CardContent>
-                  <Typography gutterBottom variant="h6" component="div">
-                    {crops.title} ({crops.period})
-                  </Typography>
+
+                  
                   <Typography variant="body2" sx={{
                     color: 'primary.main',
                     display: '-webkit-box',
                     overflow: 'hidden',
                     WebkitBoxOrient: 'vertical',
                     WebkitLineClamp: 4, // Adjust as necessary
+
                   }}>
                     {crops.describe}
                   </Typography>
+
+
+
+
                   {crops.technologies.map((e, index) => (
                     <Typography key={index} gutterBottom variant="subtitle2" component="span">
                       {e}
                     </Typography>
                   ))}
                 </CardContent>
+
+
+
+                <CardActions>
+
+                  <IconButton
+                    component="a"
+                    href={crops.git}
+                    target="_blank"
+                  >
+                    <GitHubIcon />
+
+                  </IconButton>
+
+                </CardActions>
+
               </CardActionArea>
-
-              
-              <CardActions>
-                <Button variant="contained"  href={crops.link} 
-                  target="_blank" sx={{ backgroundColor:'primary.secondary',borderRadius: "1rem", m: 1 }}>
-                  View Project
-                </Button>
-
-                <IconButton
-                component="a"
-                href={crops.git}
-                target="_blank"
-                sx={{
-                  color: 'primary.fourth', // Change this to the color you want
-                  '&:hover': {
-                    color: 'primary.secondary', 
-                  
-                  }
-                }}
-                >
-                <GitHubIcon  />
-
-                </IconButton>
-                
-              </CardActions>
             </Card>
           ))}
         </Slider>
+
+
       </Box>
     </>
   );
