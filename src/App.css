@@ -29,3 +29,8 @@
 .slick-list{
     margin: 50px !important;
 }
+
+.nextarrow{
+    position: absolute !important;
+    top: 0 !important;
+}
