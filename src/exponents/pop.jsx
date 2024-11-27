@@ -4,7 +4,7 @@ export const pop = [
         title: "HOSTEL MANAGEMENT SYSTEM",
         period: "2021",
         describe: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Optio fugiat dolorem obcaecati iure corrupti dicta natus, delectus possimus praesentium dignissimos consequatur at ipsam aperiam porro veniam explicabo voluptate deleniti nam.",
-        technologies: [],
+        technologies: ["army","b","c"],
         image: " https://www.shutterstock.com/image-vector/big-set-cute-sticker-concept-260nw-2133436391.jpg",
         link: 'https://www.google.co.in/',
         git:"https://github.com/",
