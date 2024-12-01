@@ -6,6 +6,7 @@ import { Container } from '@mui/material';
 import { ThemeProvider} from "@mui/material/styles";
 import { theme } from '../../styles/Theme';
 import Projects from './Projects';
+
 import Contact from './Contact';
 import Skills from './Skills';
 import Footer from './Footer';
