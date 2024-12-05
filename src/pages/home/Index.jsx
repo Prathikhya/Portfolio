@@ -29,6 +29,7 @@ function index() {
     transition={{ease: "easeIn", duration:1.5}}
     exit={{opacity:0, y:-20}}
     > */}
+            
       <Container>
         <Intro/>
         <About/>

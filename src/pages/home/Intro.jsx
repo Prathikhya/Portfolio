@@ -16,18 +16,16 @@ function Intro() {
       >
 
 
-        <Container className="bts" sx={{
+        <Box className="bts" sx={{
           display: 'flex',
           justifyContent: 'center',
           flexDirection: 'column',
           alignItems: 'start',
-          height: {
-            xs: '60vh',
-            sm: '80vh'
-          },
+          height: '70vh',
           pt: 2,
           mt: { xs: '70px', sm: '70px' },
-          mb: 5
+          mb: 5,
+          
         }}>
 
           <motion.div
@@ -115,7 +113,7 @@ function Intro() {
           >
            <Buttonmy content="Get Started" />
           </motion.div>
-        </Container>
+        </Box>
       </motion.div>
     </>
   )

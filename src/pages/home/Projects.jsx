@@ -8,9 +8,6 @@ import { pop } from '../../exponents/pop';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaptopIcon from '@mui/icons-material/Laptop';
 
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { pink } from '@mui/material/colors';
-
 
 function Projects() {
 
@@ -50,10 +47,9 @@ function Projects() {
             <Card
               key={crops.id}
               sx={{
-                maxWidth: 500, height:{sm: 500, md:450},  borderRadius: 3, overflow: 'hidden'
-                , "&:hover": { boxShadow: "10px 27px 39px -5px rgba(0,0,0,0.75)" }, display: "flex", justifyContent: "center",
-                alignItems: "center",
-
+                maxWidth: 500, height:{sm: 500, md:450},  borderRadius: 3, overflow: 'hidden',
+                "&:hover": { boxShadow: "10px 27px 39px -5px rgba(0,0,0,0.75)" }, 
+                display: "flex", justifyContent: "center",alignItems: "center",
               }}>
 
 
@@ -76,8 +72,11 @@ function Projects() {
                 </Typography>
 
                 {crops.technologies.map((e, index) => (
-        <Typography key={index} gutterBottom variant="subtitle2" component="span" margin={1}
-          border={1} borderRadius={50} padding={1} color='white' backgroundColor="black"
+        <Typography key={index} gutterBottom variant="subtitle2" component="span" 
+
+          sx={{
+            m:1, border:1, borderRadius:50, p:1, backgroundColor:"darkblue", color:"wheat"
+          }}
         >
           {e}
         </Typography>
