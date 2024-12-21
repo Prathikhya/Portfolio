@@ -12,10 +12,15 @@ function Navbar() {
     return (
         <>
             {/* <motion.div> */}
-            <AppBar sx={{
+        
+            <AppBar className='navbarapp' 
+            sx={{
                     bgcolor:"white",
                     color: "primary.main",
-                    backdropFilter: 'blur(10px)'
+                    backdropFilter: 'blur(10px)',
+                   
+                    
+                    
                 }}>
                     <Toolbar sx={{
                         justifyContent: 'space-between',

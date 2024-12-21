@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-:root{
-  /* --main: #3b3b3f;
+/* :root{
+  --main: #3b3b3f;
   --secondary: #4163b4;
   --third: #ff8552;
-  --fourth: #020329; */
-}
+  --fourth: #020329;
+} */
 
 *{
     margin: 0;
@@ -13,12 +13,12 @@
     font-family: "Inter", sans-serif;
   }
   
-  body {
+  /* body {
     /* background-color:#3a405a;
     color: #fff;
      */
     /* color: #fff; */
-  }
+   */
 
   
 
@@ -72,20 +72,50 @@
 }
 
 
-.bts{
+
+/* skill sections extra css */
+.imh{
+  height: 100px;
+}
+
+.skillcard{
+  width: 200px;
+  height: 150px;
+  margin-right: 1rem;
+ 
+ 
+ }
+.skillcard:hover{
+  transform: skew(10deg, 5deg);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  background-color: cadetblue;
+}
+.skillbox{
+  width: 100%;
  
 }
 
-@keyframes bts{
-
-  0%{
-    background-color: #B1AFFF;
-  }
-  100%{
-    background-color: #FFE9D0;
-  }
-
+/* slider */
+.slider{
+  margin: 20px;
 }
+
+.slick-list{
+  margin: 50px !important;
+}
+
+.nextarrow{
+  position: absolute !important;
+  top: 0 !important;
+}
+
+/* .slick-slider{
+ width: 400px !important;
+} */
+
+
+
+
 
 
 

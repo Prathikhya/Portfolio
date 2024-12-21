@@ -7,7 +7,7 @@ export default function Help() {
   return (
 
     <>
-      <Container maxWidth="xl">
+      {/* <Container maxWidth="xl"> */}
         <Box >
           <AppBar sx={{
             bgcolor: 'transparent',
@@ -38,7 +38,7 @@ export default function Help() {
         </Box>
 
 
-      </Container>
+      {/* </Container> */}
     </>
   )
 }

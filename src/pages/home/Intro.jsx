@@ -26,7 +26,7 @@ function Intro() {
           mt: { xs: '70px', sm: '70px' },
           mb: 5,
           
-        }}>
+          }}>
 
           <motion.div
             initial={{ opacity: 0 }}

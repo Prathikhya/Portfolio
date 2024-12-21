@@ -1,11 +1,10 @@
-import  './App.css';
+import  './index.css';
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 import Index from './pages/home';
-import Axios from 'axios';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function App() {
+const App = () =>  {
 
     const getPortfolio  = async() => {
       try {
@@ -26,11 +25,7 @@ function App() {
       element: <Index/>,
       errorElement: <Error/>
     },
-    // {
-    //   path: "/admin",
-    //   element: <Admin/>,
-    //   errorElement: <Error/>
-    // },
+    
   ]);
 
   return (

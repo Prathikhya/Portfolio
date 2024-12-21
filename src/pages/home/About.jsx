@@ -15,6 +15,7 @@ function About() {
 
       <Container
         sx={{
+         
           display: 'flex',
           flexDirection: {
             xs: 'column',
