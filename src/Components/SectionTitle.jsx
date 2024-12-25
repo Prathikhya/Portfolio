@@ -13,6 +13,7 @@ function SectionTitle({ title }) {
 
           </Typography>
         </Box>
+
       </Container>
 
     </>

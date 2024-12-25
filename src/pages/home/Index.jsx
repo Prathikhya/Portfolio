@@ -2,7 +2,7 @@ import React from 'react'
 import Help from '../../Components/Help';
 import Intro from './Intro';
 import About from './About';
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from '../../styles/Theme';
 import Projects from './Projects';
@@ -22,12 +22,14 @@ function index() {
       <Help />
       
       <Container >
-            <Navbar />
+        <Navbar />
+        <Box sx={{height: '100vh'}}>
         <Intro />
         <About />
         <Projects />
         <Skills />
         <Contact />
+        </Box>
       </Container>
       <Footer />
     </ThemeProvider>

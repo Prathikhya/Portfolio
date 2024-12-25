@@ -11,9 +11,9 @@ function About() {
 
   return (
     <>
+<Box id='about' sx={{height: '100vh'}}>
       <SectionTitle title="About Me" />
-
-      <Container
+<Container
         sx={{
          
           display: 'flex',
@@ -104,6 +104,8 @@ function About() {
         </Box>
       </Box>
 
+</Box>
+      
 
     </>
   )

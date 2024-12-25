@@ -8,6 +8,8 @@ import ContactMy from '../../exponents/ContactMy';
 function Contact() {
   return (
     <>
+    <Box id='contact' sx={{height: '100vh'}}>
+
       <SectionTitle title="Contact Me" />
 
       <Container sx={{ mt: 4, mb:2 }}>
@@ -22,6 +24,7 @@ function Contact() {
           </Grid>
         </Grid>
       </Container>
+    </Box>
     </>
   )
 }

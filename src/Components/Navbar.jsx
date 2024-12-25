@@ -47,7 +47,7 @@ function Navbar(props) {
             <List>
                 {NavOptions.map((N) => (
                     <ListItem key={N.Navid} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
+                        <ListItemButton sx={{ textAlign: 'center' }} href={N.NavLink}>
                             <ListItemText primary={N.NavTitle} />
                         </ListItemButton>
                     </ListItem>
@@ -90,7 +90,7 @@ function Navbar(props) {
 
                     <Box  position='relative' sx={{ display: { xs: 'none', sm: 'block',} }}>
                         {NavOptions.map((N) => (
-                            <Button key={N.Navid} className='navlink' position='absolute' sx={{color:'secondary.main', mx:2, px:2,
+                            <Button key={N.Navid} className='navlink' position='absolute' href={N.NavLink} sx={{color:'secondary.main', mx:2, px:2,
                             '&:hover':{ color:'primary.main',fontWeight:600 }}}>
                                 {N.NavTitle}
                             </Button>

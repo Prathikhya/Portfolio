@@ -4,27 +4,27 @@ const NavOptions = [
     {
         Navid: '1',
         NavTitle: 'Home',
-        NavLink:'/'
+        NavLink:'#intro'
     },
     {
         Navid: '2',
         NavTitle: 'About',
-        NavLink:'/'
+        NavLink:'#about'
     },
     {
         Navid: '3',
         NavTitle: 'Projects',
-        NavLink:'/'
+        NavLink:'#projects'
     },
     {
         Navid: '4',
         NavTitle: 'Skills',
-        NavLink:'/'
+        NavLink:'#skills'
     },
     {
         Navid: '5',
         NavTitle: 'Contact',
-        NavLink:'/'
+        NavLink:'#contact'
     },
 ]
 

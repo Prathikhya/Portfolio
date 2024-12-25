@@ -35,10 +35,8 @@ function Projects() {
 
   return (
     <>
+     <Box id='projects' sx={{height: '100vh'}}>
       <SectionTitle title="Projects" />
-
-      <Box >
-
 
         <Slider {...settings} className='slider'>
 

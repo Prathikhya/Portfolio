@@ -17,9 +17,10 @@
     font-family: "Inter", sans-serif;
   }
   
-  body{
+  html,body{
     background-color: var(--main);
-   
+    scroll-behavior: smooth; 
+    height: 100%;
   }
   
 

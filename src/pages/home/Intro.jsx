@@ -16,12 +16,14 @@ function Intro() {
       >
 
 
-        <Box className="bts" sx={{
+        <Box 
+        id='intro'
+         sx={{
           display: 'flex',
           justifyContent: 'center',
           flexDirection: 'column',
           alignItems: 'start',
-          height: '70vh',
+          height: '100vh',
           pt: 2,
           mt: { xs: '70px', sm: '70px' },
           mb: 5,
