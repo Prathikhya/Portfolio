@@ -128,5 +128,7 @@
 .navlink:hover::before{
   width: 50%;
   visibility: visible;
+  
+  
 }
 

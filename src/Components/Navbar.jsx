@@ -1,69 +1,128 @@
-    import React from 'react';
-    import { Box, Typography, Button, Toolbar } from '@mui/material';
-    import AppBar from '@mui/material/AppBar';
-    import AcUnitIcon from '@mui/icons-material/AcUnit';
-    import MenuIcon from '@mui/icons-material/Menu';
-    import { motion } from 'framer-motion';
-    import NavOptions from '../exponents/NavOptions';
+import  React  from 'react';
+import { Box, Typography, Button, Toolbar, IconButton, } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import MenuIcon from '@mui/icons-material/Menu';
+// import { motion } from 'framer-motion';
+import NavOptions from '../exponents/NavOptions';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
 
 
+const drawerWidth = 250;
 
-    function Navbar() {
-        return (
-            <>
-                {/* <motion.div> */}
-            
-                <AppBar className='navbarapp' 
-                sx={{
-                        bgcolor:"primary.main",
-                        color: "secondary.main",
-                        backdropFilter: 'blur(10px)',
-                        boxShadow: "none",
-                    }}>
-                        <Toolbar 
-                        sx={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            alignContent: 'center',
-                            px: {
-                                xs: 2,
-                                sm: 3,
-                                md: 4,
-                                lg: 5
-                            }
-                        }}
-                        >
-                            <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start',}}>
 
-                            <AcUnitIcon sx={{fontSize: "30px"}} />
-                            <Typography variant='h4' className='jin'>BTS</Typography>
-                           
-                            </Box>
-                            <Box
+function Navbar(props) {
 
-                            position={'relative'}>
-                                {NavOptions.map((N) => (
+    const { window } = props;
+    const [mobileOpen, setMobileOpen] = React.useState(false);
 
-                                    <Button key={N.Navid} 
-                                    className='navlink'
-                                    
-                                    sx={{ fontWeight:600, width:'100px',  mx:1, color: 'secondary.main', backgroundColor: 'transparent',
-                                        '&:hover': { backgroundColor: 'initial',color: 'secondary.sec'},
-                                         
-                                    }} 
-                                    href={N.NavLink}>{N.NavTitle} </Button>
-                                ))}
-                        
-                            </Box>
+    const handleDrawerToggle = () => {
+        setMobileOpen((prevState) => !prevState);
+    };
 
-                        </Toolbar>
-                    </AppBar>
+    
+    const drawer = (
+        <Box onClick={handleDrawerToggle} sx={{  textAlign: 'center',color:'secondary.main',  }}>
 
-                    
-                {/* </motion.div> */}
-            </>
-            
-        )
-    }
+            {/* logo drawer part start */}
 
-    export default Navbar;
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',bgcolor:'primary.sec', }}>
+            <AcUnitIcon sx={{ fontSize: 30, my: 2,color:'error.main' }} />
+            <Typography variant="h6" sx={{ my: 2 }}>
+                BTS
+            </Typography>
+            </Box>
+
+            {/* logo drawer part end */}
+
+            <Divider />
+
+            {/* drawer list part start */}
+
+            <List>
+                {NavOptions.map((N) => (
+                    <ListItem key={N.Navid} disablePadding>
+                        <ListItemButton sx={{ textAlign: 'center' }}>
+                            <ListItemText primary={N.NavTitle} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+
+            {/* drawer list part end */}
+
+        </Box>
+    );
+
+    const container = window !== undefined ? () => window().document.body : undefined;
+
+    return (
+        <>
+            {/* <motion.div> */}
+
+            <AppBar component="nav" sx={{bgcolor:'primary.sec', color:'secondary.main',boxShadow:'none',
+                width:'100%',  }}>
+             <Toolbar>
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        edge="start"
+                        onClick={handleDrawerToggle}
+                        sx={{ mr: 2, display: { sm: 'none' } }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+
+                    <AcUnitIcon sx={{ fontSize: 30, color:'error.main' }} />
+                    <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                    >
+                        BTS
+                    </Typography>
+
+
+                    <Box  position='relative' sx={{ display: { xs: 'none', sm: 'block',} }}>
+                        {NavOptions.map((N) => (
+                            <Button key={N.Navid} className='navlink' position='absolute' sx={{color:'secondary.main', mx:2, px:2,
+                            '&:hover':{ color:'primary.main',fontWeight:600 }}}>
+                                {N.NavTitle}
+                            </Button>
+                        ))}
+                    </Box>
+
+                </Toolbar>
+            </AppBar>
+
+
+            <nav>
+                <Drawer
+                    container={container}
+                    variant="temporary"
+                    open={mobileOpen}
+                    onClose={handleDrawerToggle}
+                    ModalProps={{
+                        keepMounted: true, // Better open performance on mobile.
+                    }}
+                    sx={{
+                        display: { xs: 'block', sm: 'none' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                    }}
+                >
+                    {drawer}
+                </Drawer>
+            </nav>
+
+            {/* </motion.div> */}
+        </>
+
+    )
+}
+
+export default Navbar;
