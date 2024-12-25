@@ -12,16 +12,30 @@ export const theme = createTheme({
         },
     },
 
+
+    //primary (light shades)/ secondary(dark shades) ~ (main,dark,light, contrastText) 
+    // error(//Falu red), warning(Naples yellow), info, success 
+
     palette: {
-        background:{
-            default: "#fff",
-        },
-        
         primary: {
-            main: "#3b3b3f",
-            secondary: "#4163b4",
-            third: "#ff8552",
-            fourth: "#020329",
+            main: "#F8F3EA",
+            sec: "#FFDBD1"
+        },
+        secondary: {
+            main: "#0B1957",
+            sec: "#FA9EBC"
+        },
+        error: {
+            main: "#D13535"
+        },
+        warning: {
+            main: "#ffba08"
+        },
+        success: {
+            main: "#214e34"
+        },
+        info: {
+            main: "#19212e"
         },
     }
 })

@@ -9,9 +9,8 @@ import Projects from './Projects';
 import { motion } from 'framer-motion';
 import Contact from './Contact';
 import Skills from './Skills';
-import Footer from './Footer';
-import Exaple from './Exaple';
-import Navbar from './Navbar';
+import Footer from '../../Components/Footer';
+import Navbar from '../../Components/Navbar';
 import '../../index.css';
 
 
