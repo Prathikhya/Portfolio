@@ -13,28 +13,31 @@ import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
 import '../../index.css';
 
-
-function index() {
+function Index() {
   return (
-
     <ThemeProvider theme={theme}>
-
-      <Help />
-      
-      <Container >
-        <Navbar />
-        <Box sx={{height: '100vh'}}>
-        <Intro />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+      <Navbar />
+      {/* <Help /> */}
+     
+        <Box sx={{ height: '100vh', backgroundColor: 'primary.sec',px:"50px", }}>
+          <Intro />
         </Box>
-      </Container>
+        {/* <Box sx={{ height: '100vh' }}>
+          <About />
+        </Box>
+        <Box sx={{ height: '100vh' }}>
+          <Projects />
+        </Box>
+        <Box sx={{ height: '100vh' }}>
+          <Skills />
+        </Box>
+        <Box sx={{ height: '100vh' }}>
+          <Contact />
+        </Box> */}
+   
       <Footer />
     </ThemeProvider>
-
-
-  )
+  );
 }
-export default index;
+
+export default Index;

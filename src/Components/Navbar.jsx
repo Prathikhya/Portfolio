@@ -27,14 +27,15 @@ function Navbar(props) {
 
     
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{  textAlign: 'center',color:'secondary.main',  }}>
+        <Box onClick={handleDrawerToggle} sx={{  textAlign: 'center',bgcolor:'secondary.sec', color:'secondary.main'}}>
 
             {/* logo drawer part start */}
 
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',bgcolor:'primary.sec', }}>
             <AcUnitIcon sx={{ fontSize: 30, my: 2,color:'error.main' }} />
             <Typography variant="h6" sx={{ my: 2 }}>
-                BTS
+            <span className='port'>PORT</span>
+            <span className='folio'>Folio</span>
             </Typography>
             </Box>
 
@@ -65,7 +66,7 @@ function Navbar(props) {
         <>
             {/* <motion.div> */}
 
-            <AppBar component="nav" sx={{bgcolor:'primary.sec', color:'secondary.main',boxShadow:'none',
+            <AppBar position='fixed' component="nav" sx={{bgcolor:'secondary.sec', color:'secondary.main',boxShadow:'none',
                 width:'100%',  }}>
              <Toolbar>
                     <IconButton
@@ -73,7 +74,7 @@ function Navbar(props) {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        sx={{ mr: 2, display: { md: 'none' } }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -82,13 +83,16 @@ function Navbar(props) {
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' }, fontWeight: 600,  }}
                     >
-                        BTS
+                        <span className='port'>PORT</span>
+                        <span className='folio'>Folio</span>
+                        
                     </Typography>
 
 
-                    <Box  position='relative' sx={{ display: { xs: 'none', sm: 'block',} }}>
+
+                    <Box  position='relative' sx={{ display: { xs: 'none', md: 'block',} }}>
                         {NavOptions.map((N) => (
                             <Button key={N.Navid} className='navlink' position='absolute' href={N.NavLink} sx={{color:'secondary.main', mx:2, px:2,
                             '&:hover':{ color:'primary.main',fontWeight:600 }}}>
@@ -111,7 +115,7 @@ function Navbar(props) {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: { xs: 'block', md: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
                 >

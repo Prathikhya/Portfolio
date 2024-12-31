@@ -1,122 +1,49 @@
 import React from 'react'
-import Button from '@mui/material/Button';
-import { Box, Typography, Container } from '@mui/material';
-import { motion } from 'framer-motion';
+import { Box, Typography} from '@mui/material';
 import Buttonmy from '../../Components/Buttonmy';
 
 
 function Intro() {
   return (
     <>
-
-      <motion.div
-        initial={{ x: -100 }}
-        animate={{ x: 0 }}
-        transition={{ ease: "easeIn", duration: .5 }}
-      >
-
-
-        <Box 
-        id='intro'
-         sx={{
-          display: 'flex',
+      <Box id='intro' sx={{display:'flex',flexDirection:{xs:'column',md:'row' }, justifyContent:'space-between',alignItems:'center',
+      height:'100vh',width:"100%"}}>
+     
+      <Box className="right_part"
+        sx={{display: 'flex',
           justifyContent: 'center',
           flexDirection: 'column',
           alignItems: 'start',
-          height: '100vh',
-          pt: 2,
-          mt: { xs: '70px', sm: '70px' },
-          mb: 5,
+          width: '50%',
+          height: '100%',
           
-          }}>
+        }}>
+          <Typography variant='h5' component='h5'>
+       Hi! I am
+       </Typography>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: 'linear' }}
-          >
+       <Typography variant='h3' component='h3'>
+        Prathikhya Devi
+       </Typography>
 
+       <Typography variant='h4' component='h4'>
+        Web Developer
+       </Typography>
 
-            <Typography variant="h4" gutterBottom sx={{
-              m: 1,
-              fontSize: {
-                xs: '1.2rem',
-              },
-            }}>
-              HI I am,
-            </Typography>
-          </motion.div>
+      </Box>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: 'linear' }}
-          >
-            <Typography variant="h2" sx={{
-              m: 1,
-              component:"span",
-              fontSize: {
-                xs: '2rem',
-                sm: '4rem',
-              },
-              fontWeight: 700,
-              letterSpacing: '.2rem',
-              color: 'primary.third'
-            }}>
+      <Box className="left_part" sx={{display: 'flex',justifyContent: 'center',alignItems: 'center',width: '50%',height: '100%',}}>
+        <Box sx={{width: '500px',height: '500px',}}>
 
-              Prathikhya Devi
-
-            </Typography>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: 'linear' }}
-          >
-            <Typography variant="h3" sx={{
-              m: 1,
-              fontWeight: 600,
-              fontSize: {
-                xs: '2rem',
-                sm: '3.5rem',
-              },
-              color:"primary.secondary"
-            }}>
-
-              Web developer
-
-            </Typography>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: 'linear' }}
-          >
-            <Typography variant="body1" sx={{
-              m: 1
-            }}>
-
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus facere, placeat similique dolor assumenda, doloremque,
-              officia illo aliquam dolores aperiam dolore laudantium. Omnis perferendis vel totam a, aut quod quam. devi
-
-            </Typography>
-          </motion.div>
-
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileHover={{
-              scale: 1.1,
-            }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: .2, ease: 'linear' }}
-          >
-           <Buttonmy content="Get Started" />
-          </motion.div>
+        <img src="https://ih1.redbubble.net/image.5512360888.9330/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" 
+        alt="intro" className='img_bg' style={{width: '100%',height: '100%',objectFit: 'cover',}} />
         </Box>
-      </motion.div>
+        </Box>
+</Box>
+   
+
+      
+
     </>
   )
 }

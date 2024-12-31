@@ -11,7 +11,8 @@ function About() {
 
   return (
     <>
-<Box id='about' sx={{height: '100vh'}}>
+<section id="about" className="about">
+
       <SectionTitle title="About Me" />
 <Container
         sx={{
@@ -49,7 +50,7 @@ function About() {
           <Typography variant='h5'
             sx={{
               fontWeight: 'bold',
-              color: 'primary.third',
+              color: 'secondary.main',
               py: 1
             }}>
             A little about myself....
@@ -86,16 +87,16 @@ function About() {
                 width:'150px',
                 height:'50px',
                 fontWeight:600,
-                backgroundColor: '',
-                color: 'primary.main',
+                backgroundColor: 'secondary.main',
+                color: 'primary.sec',
                 borderColor: 'primary.main',
                 border: 2,
                 borderRadius: 7,
                 mr: 3,
                 mt: 2,
                 '&:hover': {
-                  backgroundColor: 'primary.fourth',
-                  color:'#fff'
+                  backgroundColor: 'primary.sec',
+                  color:'secondary.main',
                 }
 
               }}>{skills}</Button>
@@ -104,7 +105,8 @@ function About() {
         </Box>
       </Box>
 
-</Box>
+      </section>
+
       
 
     </>
