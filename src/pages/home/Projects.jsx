@@ -45,10 +45,10 @@ function Projects() {
 
   return (
     <>
-      <Box id='projects' sx={{ height: "100%",padding: "2rem", margin: "1rem" }}>
+      <Box id='projects' sx={{ height: "100%",padding: "2rem", margin: "0 auto",}}>
         <SectionTitle title="Projects" />
 
-        <Box className='slider-container' sx={{ width: "100%", margin: "0 auto", }}>
+        <Box className='slider-container' sx={{ width: "100%",  }}>
 
           <Typography variant='h4' component='h4' textAlign='center' py={2}>Something i built..</Typography>
 
@@ -65,7 +65,7 @@ function Projects() {
                 image={crops.image}
                 sx={{ height: 120 }}
               />
-              
+
               <CardContent >
                 <Typography gutterBottom variant="h6" component="h6" fontWeight="600" py={1} fontSize="1rem" >
                   {crops.title}

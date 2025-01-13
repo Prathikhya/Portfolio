@@ -14,7 +14,7 @@ function Skills() {
   
   return (
     <>
-    <Box id='skills' sx={{height: '100vh'}}>
+    <Box id='skills' sx={{height: '100%',padding: "2rem", margin: "1rem"}} >
       <SectionTitle title="Skills"  />
     
       <Box className={'skillbox'}

@@ -8,7 +8,7 @@ import ContactMy from '../../exponents/ContactMy';
 function Contact() {
   return (
     <>
-    <Box id='contact' sx={{height: '100vh'}}>
+    <Box id='contact' sx={{padding: "2rem", margin: "1rem"}}>
 
       <SectionTitle title="Contact Me" />
 

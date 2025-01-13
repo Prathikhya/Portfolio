@@ -26,8 +26,9 @@ function Index() {
           <About />
           <Projects />
           <Skills />
+          <Contact />
 
-      {/* <Footer /> */}
+      <Footer />
         </Box>
         
    
