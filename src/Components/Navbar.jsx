@@ -1,7 +1,6 @@
 import  React  from 'react';
 import { Box, Typography, Button, Toolbar, IconButton, } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
-import AcUnitIcon from '@mui/icons-material/AcUnit';
 import MenuIcon from '@mui/icons-material/Menu';
 // import { motion } from 'framer-motion';
 import NavOptions from '../exponents/NavOptions';
@@ -27,14 +26,14 @@ function Navbar(props) {
 
     
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{  textAlign: 'center', color:'secondary.main'}}>
+        <Box onClick={handleDrawerToggle} sx={{  textAlign: 'center', backgroundColor:'secondary.main',color:'secondary.sec', height: '100%', width: drawerWidth, }}>
 
             {/* logo drawer part start */}
 
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',bgcolor:'primary.sec', }}>
-            {/* <AcUnitIcon sx={{ fontSize: 30, my: 2,color:'error.main' }} /> */}
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',bgcolor:'secondary.sec', }}>
+            
             <img src="https://gimgs2.nohat.cc/thumb/f/350/bts-sticker-mang-bts-bt21-bt21--m2H7d3H7i8d3A0H7.jpg" 
-        alt="intro" className='img_bg' style={{width: '10%',height: '10%',objectFit: 'cover', borderRadius:'50%'}} />
+            alt="intro" className='img_bg' style={{width: '10%',height: '10%',objectFit: 'cover', borderRadius:'50%'}} />
        
             <Typography variant="h6" sx={{ my: 2 }}>
             <span className='port'>PORTFolio</span>
@@ -42,7 +41,6 @@ function Navbar(props) {
             </Typography>
             </Box>
 
-            {/* logo drawer part end */}
 
             <Divider />
 
@@ -68,7 +66,7 @@ function Navbar(props) {
         <>
             {/* <motion.div> */}
 
-            <AppBar className='navbar' position='fixed' component="nav" sx={{boxShadow:'none'             }}>
+            <AppBar className='navbar' position='fixed' component="nav" sx={{boxShadow:'none',backdropFilter:'blur(10px)',}} >
              <Toolbar>
                     <IconButton
                         color="inherit"
@@ -80,7 +78,6 @@ function Navbar(props) {
                         <MenuIcon />
                     </IconButton>
 
-                    {/* <AcUnitIcon sx={{ fontSize: 30, color:'error.main' }} /> */}
                     <img src="https://gimgs2.nohat.cc/thumb/f/350/bts-sticker-mang-bts-bt21-bt21--m2H7d3H7i8d3A0H7.jpg" 
         alt="intro" className='img_bg' style={{width: '25px',height: '25px',objectFit: 'cover', borderRadius:'50%'}} />
        
@@ -100,8 +97,7 @@ function Navbar(props) {
 
                     <Box  position='relative' sx={{ display: { xs: 'none', md: 'block',} }}>
                         {NavOptions.map((N) => (
-                            <Button key={N.Navid} className='navlink' position='absolute' href={N.NavLink} sx={{color:'secondary.main', mx:2, px:2,
-                            '&:hover':{ color:'primary.main',fontWeight:600 }}}>
+                            <Button key={N.Navid} className='navlink' position='absolute' href={N.NavLink} sx={{ mx:2, px:2, color:'secondary.sec', fontWeight: 600,                           }}>
                                 {N.NavTitle}
                             </Button>
                         ))}
@@ -118,7 +114,7 @@ function Navbar(props) {
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
+                        keepMounted: true, 
                     }}
                     sx={{
                         display: { xs: 'block', md: 'none' },

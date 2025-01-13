@@ -10,20 +10,18 @@ export const theme = createTheme({
             lg: 1280,
            
         },
-    },
+    }, 
 
-
-    //primary (light shades)/ secondary(dark shades) ~ (main,dark,light, contrastText) 
-    // error(//Falu red), warning(Naples yellow), info, success 
 
     palette: {
         primary: {
-            main: "#F8F3EA",
-            sec: "#FFDBD1"
+            main: "#E76F51",
+            sec: "#F4A261",
+            thi: '#E9C46A'
         },
         secondary: {
-            main: "#0B1957",
-            sec: "#FA9EBC"
+            main: "#264653",
+            sec: "#2A9D8F"
         },
         error: {
             main: "#D13535"
