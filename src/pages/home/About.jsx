@@ -1,8 +1,8 @@
 import React from 'react'
 import SectionTitle from '../../Components/SectionTitle';
 import { Box, Button, Container, Typography } from '@mui/material';
-import { motion } from "framer-motion"
 import Buttonmy from '../../Components/Buttonmy';
+// import { motion } from "framer-motion"
 
 function About() {
 
@@ -11,101 +11,34 @@ function About() {
 
   return (
     <>
-<section id="about" className="about">
+       
+      <Box id="about" className="about" sx={{height:"100%", color:"white",  margin:"2rem",padding:"2rem" }}>
+      
+      <SectionTitle   title="About" />
 
-      <SectionTitle title="About Me" />
-<Container
-        sx={{
-         
-          display: 'flex',
-          flexDirection: {
-            xs: 'column',
-            md: 'row',
-          },
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          p: 2
-        }}>
-
-        <Box
-          sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-
-          }}
-        >
-          <dotlottie-player src="https://lottie.host/ae80c8f9-5e47-4eb5-9fb0-5ce147c0472a/MbMKUfAlEx.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
-        </Box>
-
-        <Box
-          sx={{
-            flex: 1,
-            p: 2,
-          }}
-        >
-
-
-          <Typography variant='h5'
-            sx={{
-              fontWeight: 'bold',
-              color: 'secondary.main',
-              py: 1
-            }}>
-            A little about myself....
-          </Typography>
-
-          <Typography variant='body1'
-            sx={{
-              pb: 2,
-              animationName: "slidein",
-            }}>
-            I am a fresh graduate with a strong passion for web development, 
-            I'm eager to join a dynamic team where I can contribute my skills and learn from experienced professionals. 
-            I'm excited about the opportunity to develop efficient, user-friendly applications and stay up-to-date with 
-            the latest industry trends."
-          </Typography>
-
-          <Buttonmy content="Download CV" />
-        </Box>
-
-
-
-      </Container>
-
-      <Box sx={{
-        m: 5,
-
-      }}>
-        <Typography variant='h6' color="primary.fourth">Here are the few Technologies I've been currenty Working:</Typography>
+      <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:{xs:"column",sm:"row"} }}>
 
         <Box>
-          {
-            skills.map((skills, index) => (
-              <Button variant='outlined' sx={{
-                width:'150px',
-                height:'50px',
-                fontWeight:600,
-                backgroundColor: 'secondary.main',
-                color: 'primary.sec',
-                borderColor: 'primary.main',
-                border: 2,
-                borderRadius: 7,
-                mr: 3,
-                mt: 2,
-                '&:hover': {
-                  backgroundColor: 'primary.sec',
-                  color:'secondary.main',
-                }
-
-              }}>{skills}</Button>
-            ))
-          }
+           <dotlottie-player src="https://lottie.host/ae80c8f9-5e47-4eb5-9fb0-5ce147c0472a/MbMKUfAlEx.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
         </Box>
+
+        <Box sx={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center" }}>
+
+        <Typography variant="h5" sx={{fontWeight:"bold", margin:".5rem" }}>A little about Me...</Typography>
+        <Typography variant="body1" sx={{ margin:".5rem"}}>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+           It has survived not only five centuries, but also the leap into electronic typesetting, 
+           remaining essentially unchanged. 
+       
+        </Typography>
+        <Buttonmy margin="1rem" text="Get in touch" link="mailto:bts007@gmail.com" content='Find More'/>
+        </Box>
+
       </Box>
 
-      </section>
+      </Box>
 
       
 

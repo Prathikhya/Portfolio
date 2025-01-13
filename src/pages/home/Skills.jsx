@@ -19,7 +19,7 @@ function Skills() {
     
       <Box className={'skillbox'}
         sx={{
-          // backgroundColor:'primary.third',
+          
           display: 'flex',
           flexDirection:'row',
           flexWrap: 'wrap',

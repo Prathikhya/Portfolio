@@ -16,26 +16,21 @@ import '../../index.css';
 function Index() {
   return (
     <ThemeProvider theme={theme}>
-      <Navbar />
+      
       {/* <Help /> */}
      
-        <Box sx={{ height: '100vh', backgroundColor: 'primary.sec',px:"50px", }}>
+        <Box > 
+          
+        <Navbar />
           <Intro />
-        </Box>
-        {/* <Box sx={{ height: '100vh' }}>
           <About />
-        </Box>
-        <Box sx={{ height: '100vh' }}>
           <Projects />
-        </Box>
-        <Box sx={{ height: '100vh' }}>
           <Skills />
+
+      {/* <Footer /> */}
         </Box>
-        <Box sx={{ height: '100vh' }}>
-          <Contact />
-        </Box> */}
+        
    
-      <Footer />
     </ThemeProvider>
   );
 }

@@ -27,15 +27,18 @@ function Navbar(props) {
 
     
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{  textAlign: 'center',bgcolor:'secondary.sec', color:'secondary.main'}}>
+        <Box onClick={handleDrawerToggle} sx={{  textAlign: 'center', color:'secondary.main'}}>
 
             {/* logo drawer part start */}
 
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',bgcolor:'primary.sec', }}>
-            <AcUnitIcon sx={{ fontSize: 30, my: 2,color:'error.main' }} />
+            {/* <AcUnitIcon sx={{ fontSize: 30, my: 2,color:'error.main' }} /> */}
+            <img src="https://gimgs2.nohat.cc/thumb/f/350/bts-sticker-mang-bts-bt21-bt21--m2H7d3H7i8d3A0H7.jpg" 
+        alt="intro" className='img_bg' style={{width: '10%',height: '10%',objectFit: 'cover', borderRadius:'50%'}} />
+       
             <Typography variant="h6" sx={{ my: 2 }}>
-            <span className='port'>PORT</span>
-            <span className='folio'>Folio</span>
+            <span className='port'>PORTFolio</span>
+            
             </Typography>
             </Box>
 
@@ -43,7 +46,7 @@ function Navbar(props) {
 
             <Divider />
 
-            {/* drawer list part start */}
+           
 
             <List>
                 {NavOptions.map((N) => (
@@ -55,7 +58,6 @@ function Navbar(props) {
                 ))}
             </List>
 
-            {/* drawer list part end */}
 
         </Box>
     );
@@ -66,8 +68,7 @@ function Navbar(props) {
         <>
             {/* <motion.div> */}
 
-            <AppBar position='fixed' component="nav" sx={{bgcolor:'secondary.sec', color:'secondary.main',boxShadow:'none',
-                width:'100%',  }}>
+            <AppBar className='navbar' position='fixed' component="nav" sx={{boxShadow:'none'             }}>
              <Toolbar>
                     <IconButton
                         color="inherit"
@@ -79,16 +80,21 @@ function Navbar(props) {
                         <MenuIcon />
                     </IconButton>
 
-                    <AcUnitIcon sx={{ fontSize: 30, color:'error.main' }} />
+                    {/* <AcUnitIcon sx={{ fontSize: 30, color:'error.main' }} /> */}
+                    <img src="https://gimgs2.nohat.cc/thumb/f/350/bts-sticker-mang-bts-bt21-bt21--m2H7d3H7i8d3A0H7.jpg" 
+        alt="intro" className='img_bg' style={{width: '25px',height: '25px',objectFit: 'cover', borderRadius:'50%'}} />
+       
+                    
                     <Typography
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' }, fontWeight: 600,  }}
                     >
-                        <span className='port'>PORT</span>
-                        <span className='folio'>Folio</span>
+                        <span className='port'>PORTFolio </span>
+                        
                         
                     </Typography>
+
 
 
 

@@ -16,18 +16,28 @@ function Projects() {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 2,
+    slidesToShow: 3,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows: true,
+    arrows: false,
     responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+  
+        },
+        
+      },
       {
         breakpoint: 960,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
 
         },
+        
       },
+
 
     ],
   };
@@ -35,81 +45,73 @@ function Projects() {
 
   return (
     <>
-     <Box id='projects' sx={{height: '100vh'}}>
-      <SectionTitle title="Projects" />
+      <Box id='projects' sx={{ height: "100%",padding: "2rem", margin: "1rem" }}>
+        <SectionTitle title="Projects" />
+
+        <Box className='slider-container' sx={{ width: "100%", margin: "0 auto", }}>
+
+          <Typography variant='h4' component='h4' textAlign='center' py={2}>Something i built..</Typography>
 
         <Slider {...settings} className='slider'>
-
           {pop.map((crops) => (
 
             <Card
               key={crops.id}
-              sx={{
-                maxWidth: 500, height:{sm: 500, md:450},  borderRadius: 3, overflow: 'hidden',
-                "&:hover": { boxShadow: "10px 27px 39px -5px rgba(0,0,0,0.75)" }, 
-                display: "flex", justifyContent: "center",alignItems: "center",
-              }}>
-
-
-
+              sx={{maxWidth: 345, height: 400, margin: "0 auto", boxShadow: 3, borderRadius: 5, }}>
+              
               <CardMedia
                 component="img"
-                alt="green iguana"
+                alt={crops.title}
                 image={crops.image}
-                sx={{ height: 140, borderRadius: 3 }}
+                sx={{ height: 120 }}
               />
-
-              <CardContent sx={{textAlign:"center"}}>
-                
-                  <Typography gutterBottom variant="h6" component="h6" fontWeight="600"  py={1}>
-                    {crops.title}
-                  </Typography>
+              
+              <CardContent >
+                <Typography gutterBottom variant="h6" component="h6" fontWeight="600" py={1} fontSize="1rem" >
+                  {crops.title}
+                </Typography>
 
                 <Typography variant='body2' component="p" py={1}>
                   {crops.describe}
                 </Typography>
 
-                {crops.technologies.map((e, index) => (
-        <Typography key={index} gutterBottom variant="subtitle2" component="span" 
+                {/* {crops.technologies.map((e, index) => (
+                  <Typography key={index} gutterBottom variant="subtitle2" component="span"
 
-          sx={{
-            m:1, border:1, borderRadius:50, p:1, backgroundColor:"darkblue", color:"wheat"
-          }}
-        >
-          {e}
-        </Typography>
-      ))}
+                    sx={{
+                      m: 1, border: 1, borderRadius: 50, p: 1, backgroundColor: "darkblue", color: "wheat"
+                    }}
+                  >
+                    {e}
+                  </Typography>
+                ))} */}
 
-                <Box display="flex"             // Flexbox layout for horizontal alignment
-                  justifyContent="center"    // Center the items horizontally
-                  alignItems="center"        // Align the items vertically
-                  margin="0 auto"
-                  p={2}
+                <Box display="flex"             
+                  justifyContent="center"    
+                  alignItems="center"                          
+                  className='project-link'
                 >
-                  <a href={crops.link} target="_blank" rel="noopener noreferrer">
+                  <a href={crops.link} target="_blank" rel="noopener noreferrer" >
                     <IconButton>
-                      <LaptopIcon />
+                      <LaptopIcon sx={{fontSize:"1rem",color:"white"}}/>
                     </IconButton>
                   </a>
 
 
-                  <a href={crops.git} target="_blank" rel="noopener noreferrer">
+                  <a href={crops.git} target="_blank" rel="noopener noreferrer" >
                     <IconButton>
-                      <GitHubIcon />
+                      <GitHubIcon sx={{fontSize:"1rem",color:"white"}}/>
                     </IconButton>
                   </a>
 
 
                 </Box>
-
               </CardContent>
-
-
             </Card>
           ))}
         </Slider>
 
-
+        </Box>
       </Box>
     </>
   );

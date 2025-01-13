@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root{
-  --main: #F8F3EA;
-  --secondary: #FFDBD1;
-  --third: #0B1957;
-  --fourth: #FA9EBC;
+  --lavender-blush: #f5e6e8ff;
+  --thistle: #d5c6e0ff;
+  --rose-quartz: #aaa1c8ff;
+  --mountbatten-pink: #967aa1ff;
+  --space-cadet: #192a51ff;
   --error: #D13535;
   --warnin: #ffba08;
   --success: #214e34;
@@ -18,9 +19,10 @@
   }
   
   html,body{
-    background-color: var(--secondary) !important;
+    background-color: var(--space-cadet) !important;
     scroll-behavior: smooth; 
     height: 100%;
+    color: white !important;
   }
   
 
@@ -35,7 +37,10 @@
 
   .port{
     padding-left: 10px;
-    color: var(--main);
+    background-image: linear-gradient(to right top, #84ffc9, #56f6e1, #38eaf4, #46dcff, #6accff, #7fc4ff, #9bbaff, #b9afff, #c5acff, #d1a9ff, #dea5ff, #eca0ff);
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
   }
 
 
@@ -139,3 +144,30 @@
   
 }
 
+
+
+.footer{
+  width: 100%;
+  background-color: var(--mountbatten-pink);
+}
+
+
+.intro{
+  color: white !important;
+}
+
+.navbar{
+  background-color: var(--mountbatten-pink) !important;
+  color: #fff !important;
+}
+/* project part */
+
+
+.project-link a{
+  font-size: .3rem;
+  padding: .2rem;
+  margin: .5rem;
+  border-radius: 50%;
+  background-color: #00d0ff;
+  
+}
