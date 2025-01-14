@@ -55,15 +55,29 @@
   .navlink:hover::before{
     width: 50%;
     visibility: visible;
-    
-    
+  }
+/* slider part */
+  .navlink-slide::before{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 0;
+    height: 5px;
+    background-color:var(--saffron);
+    transition: .5s ease-in-out;
+    visibility: none;
+  }
+  .navlink-slide:hover::before{
+    width: 20%;
+    visibility: visible;
   }
   
    /* portfolio name */
 
   .port{
     padding-left: 10px;
-    background-image: linear-gradient(to right top, #84ffc9, #56f6e1, #38eaf4, #46dcff, #6accff, #7fc4ff, #9bbaff, #b9afff, #c5acff, #d1a9ff, #dea5ff, #eca0ff);
+    background-image: linear-gradient(60deg, var(--burnt-sienna), var(--sandy-brown),var(--saffron), var(--persian-green));
     background-clip: text;
     color: transparent;
     font-size: 2rem;
@@ -78,7 +92,18 @@
 /* it is intro Part */
 .intro{
   background-image: linear-gradient(60deg, var(--burnt-sienna), var(--sandy-brown),var(--saffron), var(--persian-green));
+  background-size: 300%;
+  animation: bg-animation 25s infinite alternate;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 
+}
+@keyframes bg-animation{
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
 }
 /* INtro.jsx section */
 .name{

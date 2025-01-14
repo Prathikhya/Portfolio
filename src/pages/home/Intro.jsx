@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Typography} from '@mui/material';
 import Buttonmy from '../../Components/Buttonmy';
+import { motion } from "framer-motion";
 
 function Intro() {
   return (
@@ -15,7 +16,15 @@ function Intro() {
       <Typography variant="h4" sx={{fontWeight:"bold", }}>Hello, I'm </Typography>
       <Typography variant="h3" sx={{fontWeight:"bold",color:"secondary.main" }}><span>Prathikhya Devi</span></Typography>
       <Typography variant="h5" sx={{fontWeight:"bold", }}>I'm a Full Stack Developer</Typography>
+      
+      <motion.div
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 1.1 }}
+      drag="x"
+      dragConstraints={{ left: -100, right: 100 }}>
       <Buttonmy text="Get in touch" link="mailto:bts007@gmail.com" content='Find More'/>
+      
+       </motion.div>
         </Box>  
 
        <Box>

@@ -49,7 +49,7 @@ function Navbar(props) {
             <List>
                 {NavOptions.map((N) => (
                     <ListItem key={N.Navid} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }} href={N.NavLink}>
+                        <ListItemButton className='navlink-slide' sx={{ textAlign: 'center' }} href={N.NavLink}>
                             <ListItemText primary={N.NavTitle} />
                         </ListItemButton>
                     </ListItem>

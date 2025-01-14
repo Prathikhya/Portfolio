@@ -6,19 +6,20 @@ import { Box, Container } from '@mui/material';
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from '../../styles/Theme';
 import Projects from './Projects';
-import { motion } from 'framer-motion';
 import Contact from './Contact';
 import Skills from './Skills';
 import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
 import '../../index.css';
 
+
 function Index() {
+  
   return (
     <ThemeProvider theme={theme}>
       
       {/* <Help /> */}
-     
+      
         <Box > 
           
         <Navbar />
